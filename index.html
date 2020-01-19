@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Graphs</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="node_modules/vis/dist/vis-network.min.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body onload="draw();">
+
+
+
+<!-- <h1>Adjust</h1>
+<table>
+    <tr>
+        <td>
+            <h2>Node</h2>
+            <table>
+                <tr>
+                    <td></td>
+                    <td><label for="node-id">Id</label></td>
+                    <td><input id="node-id" type="text" value="6"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label for="node-label">Label</label></td>
+                    <td><input id="node-label" type="text" value="Node 6"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Action</td>
+                    <td>
+                        <button id="node-add" onclick="addNode();">Add</button>
+                        <button id="node-update" onclick="updateNode();">Update</button>
+                        <button id="node-remove" onclick="removeNode();">Remove</button>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <h2>Edge</h2>
+            <table>
+                <tr>
+                    <td></td>
+                    <td><label for="edge-id">Id</label></td>
+                    <td><input id="edge-id" type="text" value="5"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label for="edge-from">From</label></td>
+                    <td><input id="edge-from" type="text" value="3"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label for="edge-to">To</label></td>
+                    <td><input id="edge-to" type="text" value="4"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Action</td>
+                    <td>
+                        <button id="edge-add" onclick="addEdge();">Add</button>
+                        <button id="edge-update" onclick="updateEdge();">Update</button>
+                        <button id="edge-remove" onclick="removeEdge();">Remove</button>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+</table> -->
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-outline-success">
+      <input data-action="add_node" type="radio" name="options" id="option1" autocomplete="off">Добавить узел
+    </label>
+    <label class="btn btn-outline-primary">
+      <input data-action="add_edge" type="radio" name="options" id="option2" autocomplete="off">Добавить ребро
+    </label>
+    <label class="btn btn-outline-danger">
+        <input data-action="clear_all" type="radio" name="options" id="option2" autocomplete="off">Очистить экран
+    </label>
+    <label class="btn btn-outline-success">
+        <input data-action="complete_task" type="radio" name="options" id="option2" autocomplete="off">Выполнить задание
+    </label>
+</div>
+
+<!-- <h1>View</h1> -->
+<table class="view">
+    <colgroup>
+        <col width="25%">
+        <col width="25%">
+        <col width="50%">
+    </colgroup>
+    <tr>
+       <!--  <td>
+           <h2>Nodes</h2>
+           <pre id="nodes"></pre>
+       </td>
+       
+       <td>
+           <h2>Edges</h2>
+           <pre id="edges"></pre>
+       </td>
+        -->
+        <td>
+            <!-- <h2>Network</h2> -->
+
+            <div id="network"></div>
+        </td>
+    </tr>
+</table>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="node_modules/vis/dist/vis.js"></script>
+<script src="myscripts.js"></script>
+
+</body>
+</html>
